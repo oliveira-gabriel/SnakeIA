@@ -6,7 +6,7 @@ Cada snake contém uma rede neural. A rede neural tem uma camada de entrada de 2
 
 ### Visão
 ---
-A snake pode ver em 8 direções. Em cada uma dessas direções, a cobra procura 3 coisas:
+A snake pode ver em 8 direções. Em cada uma dessas direções, a snake procura 3 coisas:
 
 * Distância até a comida 
 * Distância até o seu corpo
@@ -21,7 +21,7 @@ A cada geração, é criada uma população de 2.000 snakes. Sempre que uma snak
 
 ### Pontuação
 ---
-A pontuação de uma cobra depende de quanto a snake permanece viva. No entanto, existe a possibilidade de que uma snake possa desenvolver uma estratégia em que ela faz um loop em um determinado padrão e nunca morre. Para evitar isso, cada snake pode realizar 200 movimentos. Cada vez que ele come, esse contador é resetado. Isso significa que as cobras que evoluíram para entrar em loops acabarão morrendo.
+A pontuação de uma snake depende de quanto a snake permanece viva. No entanto, existe a possibilidade de que uma snake possa desenvolver uma estratégia em que ela faz um loop em um determinado padrão e nunca morre. Para evitar isso, cada snake pode realizar 200 movimentos. Cada vez que ele come, esse contador é resetado. Isso significa que as snakes que evoluíram para entrar em loops acabarão morrendo.
 
 ### Crossover  e mutação
 ---
