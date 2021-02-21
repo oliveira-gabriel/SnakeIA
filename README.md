@@ -1,6 +1,6 @@
 # SnakeIA
 
-###Neural Network
+### Neural Network
 
 Cada snake contém uma rede neural. A rede neural tem uma camada de entrada de 24 neurônios, 2 camadas ocultas de 8 neurônios e uma camada de saída de 4 neurônios. Observação: a rede agora pode ser personalizada com o número de camadas ocultas e também com o número de neurônios nas camadas ocultas.
 
