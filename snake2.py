@@ -988,9 +988,9 @@ def saveMostApt(index_fittest1,score_most_fittest):
 	global best_snake_food
 	global best_snake_head
 
-	np.save('/content/gdrive/MyDrive/deepfake/checkpoints/'+str(currentGeneration)+'/brain_'+str(score_most_fittest)+'.npy', np.asarray(best_snake_brain))
-	np.save('/content/gdrive/MyDrive/deepfake/checkpoints/'+str(currentGeneration)+'/food', np.asarray(best_snake_food))
-	np.save('/content/gdrive/MyDrive/deepfake/checkpoints/'+str(currentGeneration)+'/head', np.asarray(best_snake_head))
+	np.save('/content/gdrive/MyDrive/snake/checkpoints/'+str(currentGeneration)+'/brain_'+str(score_most_fittest)+'.npy', np.asarray(best_snake_brain))
+	np.save('/content/gdrive/MyDrive/snake/checkpoints/'+str(currentGeneration)+'/food', np.asarray(best_snake_food))
+	np.save('/content/gdrive/MyDrive/snake/checkpoints/'+str(currentGeneration)+'/head', np.asarray(best_snake_head))
 
 def replicate():
 	
@@ -1007,7 +1007,7 @@ def replicate():
 
 	index_fittest1 = np.argmax(score_set)
 
-	file = open('/content/gdrive/MyDrive/deepfake/checkpoints/scores.txt', 'a')
+	file = open('/content/gdrive/MyDrive/snake/checkpoints/scores.txt', 'a')
 	score_most_fittest = score_set[index_fittest1]
 	file.write(str(score_most_fittest)+'\n')
 	file.close()
@@ -1208,9 +1208,9 @@ def loadIndividuals():
 	# Inicia com indivíduos randômicos
 
 	# Carrega os indivíduos melhores salvos. Provavelmente eles irão sobreviver no meio da cambada de indivíduos mais novos
-	path1 = "/content/gdrive/MyDrive/deepfake/checkpoints/224/brain_43471.npy"
-	path2 = "/content/gdrive/MyDrive/deepfake/checkpoints/223/brain_27887.npy"
-	path3 = "/content/gdrive/MyDrive/deepfake/checkpoints/222/brain_26250.npy"
+	path1 = "/content/gdrive/MyDrive/snake/checkpoints/224/brain_43471.npy"
+	path2 = "/content/gdrive/MyDrive/snake/checkpoints/223/brain_27887.npy"
+	path3 = "/content/gdrive/MyDrive/snake/checkpoints/222/brain_26250.npy"
 
 
 	file1 = np.load(path1, allow_pickle=True).tolist()
@@ -1271,10 +1271,10 @@ current_snake_score = 0
 # screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 try:
-	if not os.path.isdir(os.path.abspath(os.getcwd())+'/content/gdrive/MyDrive/deepfake/checkpoints'):
-		os.mkdir('/content/gdrive/MyDrive/deepfake/checkpoints')
+	if not os.path.isdir(os.path.abspath(os.getcwd())+'/content/gdrive/MyDrive/snake/checkpoints'):
+		os.mkdir('/content/gdrive/MyDrive/snake/checkpoints')
 
-	os.mkdir('/content/gdrive/MyDrive/deepfake/checkpoints/'+str(currentGeneration))
+	os.mkdir('/content/gdrive/MyDrive/snake/checkpoints/'+str(currentGeneration))
   
 except FileExistsError:
 	pass
@@ -1410,7 +1410,7 @@ while running:
 				replicate()
 
 				try:
-					os.mkdir('/content/gdrive/MyDrive/deepfake/checkpoints/'+str(currentGeneration))
+					os.mkdir('/content/gdrive/MyDrive/snake/checkpoints/'+str(currentGeneration))
 				except FileExistsError:
 					pass			
 
